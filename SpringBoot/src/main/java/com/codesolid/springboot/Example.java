@@ -26,7 +26,6 @@ public class Example {
     }
     
     public static void main(String[] args) throws Exception {
-        System.setProperty("security.user.password", "DoubleSecretProbation");
         SpringApplication.run(Example.class, args);
     }
 
