@@ -1,0 +1,3 @@
+[submodule "spring-rest-service-oauth"]
+	path = spring-rest-service-oauth
+	url = git@github.com:royclarkson/spring-rest-service-oauth.git
