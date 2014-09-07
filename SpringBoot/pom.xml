@@ -15,7 +15,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>    
     </dependencies>
-   
     <!-- Additional lines to be added here... -->
     <!-- (you don't need this if you are using a .RELEASE version) -->
     <repositories>
