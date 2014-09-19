@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<title>Home</title>
+<link href="../css/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../css/site.css" />
+
+<!-- Allow older IE versions to style semantic elements -->
+<!--[if lt IE 9]>
+<script>
+    var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+            "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+            "progress,section,time,video").split(',');
+    for (var i = 0; i < e.length; i++) {
+        document.createElement(e[i]);
+    }
+</script>
+<![endif]-->
+</head>
+<body>
+<div id="holder">
+    <nav class="clearfix" class="nav_bordered">
+    <span id="logo">JohnLockwood.com</span>
+    <ul style="text-align:center">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tasks">Tasks</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/goals">Goals</a></li>
+    </ul>
+</nav>
+
+<article class="container">
+    <div class="two-thirds column">
+        <div class="taskform_background">
+                <h2>Working On:</h2>
+            <p>Take some wooden whistles, and find out why they wouldn't whistle.  If given a steel whistle,
+            discover why it steel wooden whistle.  But if you have a tin whistle, now you tin whistle.</p>
+            <div>
+                <button interval_id="-1" id="toggle_timer" class="start_button">Start Timer</button>
+            </div>
+            <div>
+               <div id="timer_output" class="timer_output_stopped"></div>
+            </div>
+        </div>
+   </div>
+        <div class="one-third column">
+            <h2>Today's Tasks</h2>
+            <p>No tasks scheduled.</p>
+            <!--<h3>Most Important</h3>
+            <h3>Everything else</h3> -->
+            <!-- <p><a href="#" title="Enter a task at left. These are the most important things you need to do today to help you reach your goals.
+            We recommend adding no more than three tasks to this list.">Learn more</a></p>-->
+
+            <!--
+            <p>Hello, elitepropertiesbroker@gmail.com! <a href="/j_spring_security_logout">Sign Out</a></p>
+            -->
+        </div>
+    </div>
+</article>
+
+<footer>
+    <a href="test2.html">New User State</a>&nbsp;&nbsp;<a href="test.html">After Entering</a></li>
+</footer>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery-ui-1.10.3.custom.min.js"></script>
+
+<script>
+    function pad(n, width, z) {
+        z = z || '0';
+        n = n + '';
+        return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+    }
+
+    function formatTime(elapsed) {
+        var hours = 0, minutes = 0, seconds = 0;
+        seconds = elapsed % 60;
+        if (elapsed >= 60)
+            minutes = Math.floor(elapsed /60) % 60;
+        if (elapsed >= 3600)
+            hours = Math.floor(elapsed / 3600);
+
+        return hours + ":" + pad(minutes, 2, 0) + ":" + pad(seconds, 2, 0);
+   }
+
+    function stopTimer(btn) {
+        var output = $("#timer_output");
+        output.removeClass("timer_output_active");
+        output.addClass("timer_output_stopped");
+        clearInterval(btn.attr("interval_id"));
+        btn.attr("interval_id", -1);
+        btn.html("Start Timer");
+        btn.removeClass("stop_button");
+        btn.addClass("start_button");
+
+    }
+
+    function startTimer(btn) {
+        var start = new Date().getTime();
+        var elapsed = '0.0';
+        var output = $("#timer_output");
+        output.html("Elapsed time: " + formatTime(elapsed));
+        output.removeClass("timer_output_stopped")
+        output.addClass("timer_output_active");
+        var intervalId = window.setInterval(function()
+        {
+            var time = new Date().getTime() - start;
+            elapsed = Math.floor(time / 1000);
+            output.html("Elapsed time: " + formatTime(elapsed));
+
+        }, 1000);
+
+        btn.attr("interval_id", intervalId);
+        btn.removeClass("start_button");
+        btn.addClass("stop_button");
+        btn.html("Stop Timer");
+    }
+
+    $("#toggle_timer").click( function() {
+        var btn = $("#toggle_timer");
+        if (parseInt(btn.attr("interval_id")) < 0)
+            startTimer(btn);
+        else
+            stopTimer(btn);
+        });
+
+    $("#pause").click( function() {
+        alert("Pause");
+    });
+
+    $(document).ready(function() {
+        // Ready code
+    });
+
+</script>
+
+</body>
+</html>

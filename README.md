@@ -14,7 +14,3 @@ be an abstraction of the security layer of [Goalboost](http://www.goalboost.com)
 And maybe:
 
 * Some sort of LDAP example
-
-Additional Resources
----
-[Spring Social Reference](http://docs.spring.io/spring-social/docs/current/reference/htmlsingle/)
