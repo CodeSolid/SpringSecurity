@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/static/493/cs/images/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="robots" content="noindex" />
+
+
+<link rel="stylesheet" href="/static/493/cs/css/screen.css" />
+<script type="text/javascript">
+    document.documentElement.className = "js";
+</script>
+
+    <title>Register for the Guardian</title>
+</head>
+<body>
+
+<div id="wrapper" class="twelve-col identity">
+    <h1>
+        <a rel="home" class="guardian-logo" href="http://www.guardian.co.uk/">
+            <img src="/static/493/cs/images/theguardian_logo.png" alt="The Guardian" />
+        </a> Register
+    </h1>
+
+        
+    	<div class="social-login-box">
+
+        <h2>Register using an existing account</h2>
+
+		<ul class="social-login">
+                            <li>
+                    <a class="facebook" href="https://id.guardian.co.uk/facebook/signin?returnUrl=http%3A%2F%2Fwww.guardian.co.uk" target="_parent">Sign in with Facebook</a>
+                </li>
+                                                    <li>
+                    <a class="google-plus" href="https://id.guardian.co.uk/google/signin?returnUrl=http%3A%2F%2Fwww.guardian.co.uk" target="_parent">Sign in with Google+</a>
+                </li>
+                                        <li>
+                    <a class="twitter" href="https://id.guardian.co.uk/twitter/signin?returnUrl=http%3A%2F%2Fwww.guardian.co.uk" target="_parent">Sign in with Twitter</a>
+                </li>
+                    </ul>
+	</div>
+        <div class="register-box">
+            <form id="register-1" method="POST">
+        <fieldset>
+    <legend>
+                            Please provide the following information
+                            to register for guardian.co.uk.
+    </legend>
+
+    <noscript>
+    <p id="cookie-message" class="globalError">Please ensure your browser supports cookies and that they are enabled.</p>
+</noscript>
+
+    
+                            <div class="field">
+                        <label for="username">Username:</label>
+        <input type="text" name="subForms[username].username" id="username" value="" maxlength="20" aria-required="true" />
+        <div class="tooltip helper">This is how your name will appear on the site</div>                    <input type="hidden" id="subForms[username].canChange" name="subForms[username].canChange" value="true" ${attributes}> </div>                            <div class="field">
+	        	<label class="field-label" for="email">Email address:</label>
+	<input class="field-input" maxlength="250" type="email" name="subForms[emailAddress].emailAddress" id="email" value="" aria-required="true" required="required" />
+
+	</div>
+                            <div class="field">
+                <label class="field-label" for="password">New password:</label>
+    <input class="field-input" type="password" name="subForms[password].password" id="password" maxlength="20" data-minlength="6" aria-required="true" required="required" />
+
+            <div class="inline-field-message notice helptext js-hide" data-helper-for="password">Between 6 and 20 characters</div>
+    </div>
+
+<div class="field">
+                <label class="field-label" for="password-again">Repeat password:</label>
+    <input class="field-input" type="password" name="subForms[password].passwordConfirmation" id="password-again" maxlength="20" aria-required="true" required="required" data-validate="equalto[#password]" />
+    </div>                                    
+
+
+                            <div class="field check">
+                    <input type="hidden" name="_subForms[marketingOptin].receiveGnmMarketing" value="on"/>
+    <input type="checkbox" id="subForms[marketingOptin].receiveGnmMarketing" name="subForms[marketingOptin].receiveGnmMarketing" checked="checked" />
+    <label for="subForms[marketingOptin].receiveGnmMarketing">I'd like to be kept up to date with offers and developments from Guardian News and Media Ltd.</label>
+</div>
+
+<div class="field check">
+                    <input type="hidden" name="_subForms[marketingOptin].receive3rdPartyMarketing" value="on"/>
+    <input type="checkbox" id="subForms[marketingOptin].receive3rdPartyMarketing" name="subForms[marketingOptin].receive3rdPartyMarketing" />
+    <label for="subForms[marketingOptin].receive3rdPartyMarketing">I'd like to receive messages from organisations screened by Guardian News and Media Ltd.</label>
+</div>
+                            <div class="field check accept">
+                <input type="checkbox" name="subForms[termsAndConditions].termsAndConditions" aria-required="true" id="accept-terms" />
+        <label for="accept-terms">
+                <strong>I have read, understood and agree to the <a href="http://users.guardian.co.uk/help/article/0,,933909,00.html" title="" target="_blank" rel="nofollow">Terms of service</a> of the site.</strong>
+            </label>
+</div>        
+                <div class="field submit">
+                                        <input type="hidden" name="policy" value="basicIdentity" />
+                    <input type="submit" class="button" value="Continue" />
+                </div>
+            </fieldset>
+		</form>
+	</div>
+
+	                <div class="ft">
+                    <p class="help"><a href="http://www.guardian.co.uk/help/identity-faq" target="_new">Help with your user account</a> </p>
+                </div>
+
+</div>
+    <script src="/static/493/cs/js/jquery-1.4.2.min.js"></script>
+<script src="/static/493/cs/js/guardian.r2.validator.js"></script>
+<script src="/static/493/cs/js/guardian.r2.identity.js"></script>
+<script src="/static/493/cs/js/jquery.cookie.js"></script>
+<script src="/static/493/cs/js/guardian.r2.identity.cookie-check.js"></script>
+<script type="text/javascript">
+    var s_account="guardiangu-users,guardiangu-network";
+</script>
+<script type="text/javascript" src="/static/493/cs/js/omniture-H.25.4.js"></script>
+<script type="text/javascript">        
+    s.pageName="Register";
+    s.server='<!--#echo var="X_GU_httpd"-->';
+    s.channel="Users";
+    s.prop11="Users";
+    s.hier2="GU/Users/Registration";
+    s.events="event30";
+        s.prop8=""; //pageid
+    s.prop9="userid"; //content type
+    s.eVar23="";
+    s.eVar24="";
+    s.eVar27="";
+    s.eVar28="";
+    s.eVar42="http:\/\/www.guardian.co.uk"
+    s.eVar57=""
+    s.eVar58=""
+        s.state="";
+    s.zip="";
+    var s_code=s.t();if(s_code)document.write(s_code);
+</script>
+<noscript>
+    <div><img alt="" src='https://hits-secure.guardian.co.uk/b/ss/guardiangu-users,guardiangu-network/1/H.20.3/55762?ns=guardian&amp;pageName=Register&amp;ch=Users&amp;events=event30&amp;c2=GUID:$requestInformation.omnitureData.userId&amp;c9=userid&amp;c11=Users&amp;v23=basicIdentity%3Anewreg%3A%3Atheguardian&amp;v24=&amp;v27=&amp;v28=&amp;h2=GU%2fUsers%2fRegistration' width="1" height="1" /></div>
+</noscript>
+<script src="/static/493/cs/js/guardian.r2.identity.register.js"></script>
+</body>
+</html>

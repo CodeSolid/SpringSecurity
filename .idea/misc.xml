@@ -4,12 +4,14 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/password-jdbc" />
     <file type="web" url="file://$PROJECT_DIR$/spring-rest-service-oauth" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/SpringBoot/pom.xml" />
+        <option value="$PROJECT_DIR$/password-jdbc/pom.xml" />
       </list>
     </option>
   </component>

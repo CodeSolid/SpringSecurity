@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/static/493/cs/images/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="robots" content="noindex" />
+
+
+<link rel="stylesheet" href="/static/493/cs/css/screen.css" />
+<script type="text/javascript">
+    document.documentElement.className = "js";
+</script>
+
+    <title>Sign in to the Guardian</title>
+    <script src="https://pasteup.guim.co.uk/js/lib/jquery/1.8.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>document.body.className=(document.body.className)?document.body.className+' has-js':'has-js';</script>
+    <div id="wrapper" class="twelve-col identity signin  ">
+    	<h1>
+            <a rel="home" class="guardian-logo" href="http://www.guardian.co.uk/">
+                <img src="/static/493/cs/images/theguardian_logo.png" alt="The Guardian" />
+            </a> Sign in
+        </h1>
+
+                
+        <div class="sign-in-box">
+            <div class="left-box">
+                                    <ul class="social-login">
+                                            <li>
+                            <a class="facebook" href="https://id.guardian.co.uk/facebook/signin?returnUrl=http%3A%2F%2Fwww.guardian.co.uk&authFailedReturnUrl=http%3A%2F%2Fwww.guardian.co.uk" target="_parent">Sign in with Facebook</a>
+                        </li>
+                                                                                    <li class="google-plus">
+                          <a class="google-plus google-plus-fallback-button" href="https://id.guardian.co.uk/google/signin?returnUrl=http%3A%2F%2Fwww.guardian.co.uk" target="_parent">Sign in with Google+</a>
+                          <span
+                                  class="g-signin"
+                                  data-callback="gPlusSigninCallback"
+                                  data-clientid="774465807556.apps.googleusercontent.com"
+                                  data-requestvisibleactions="http://schemas.google.com/AddActivity"
+                                  data-scope="https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/plus.login"
+                                  data-approvalprompt="auto"
+                                  data-apppackagename="com.guardian"                                  data-cookiepolicy="http://guardian.co.uk">
+                              <span class="google-plus google-plus-js-button hidden"></span>
+                          </span>
+                        </li>
+                                                                <li>
+                            <a class="twitter" href="https://id.guardian.co.uk/twitter/signin?returnUrl=http%3A%2F%2Fwww.guardian.co.uk" target="_parent">Sign in with Twitter</a>
+                        </li>
+                                        </ul>
+                                <div class="terms-and-conditions">
+                    <p>
+                        By proceeding, you agree to The Guardian's <a href="http://www.guardian.co.uk/help/terms-of-service" target="_blank">Terms of Service</a> and <a href="http://www.guardian.co.uk/help/privacy-policy" target="_blank">Privacy Policy</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="right-box">
+                <form id="sign-in" action="https://id.guardian.co.uk/signin" method="post" target="_parent">
+                    <fieldset>
+                        <input type="hidden" name="returnUrl" value="http://www.guardian.co.uk" />
+                        <input type="hidden" name="authFailedReturnUrl" value="http://www.guardian.co.uk" />
+
+                        <legend>Or use your <strong>Guardian</strong> account</legend>
+
+                        <noscript>
+                            <p id="cookie-message" class="globalError">Please ensure your browser supports cookies and that they are enabled.</p>
+                        </noscript>
+
+                        
+                        <div class="field tooltip-underneath">
+                            <label for="email">Email address</label>
+                                                                <input type="email" name="emailAddress" id="email" value="" aria-required="true" />
+                                                    </div>
+
+                        <div class="field tooltip-underneath">
+                            <label for="password">Password</label>
+                                                                <input type="password" name="password" id="password" maxlength="20" aria-required="true" class="noshow-valid" />
+                                                    </div>
+
+                        <div class="signin-tools">
+                            <div class="check">
+                                                                        <input type="checkbox" id="keep-check" value="on" name="keepMeSignedIn" checked="checked" />
+                                <label for="keep-check">Keep me signed in</label>
+                            </div>
+
+
+                            <div class="forgotten-password-link" id="forgotten-password-link">
+                                <p><a href="https://id.guardian.co.uk/resetpassword" target="_parent">Problems signing in?</a></p>
+                            </div>
+                        </div>
+
+                        <div class="field buttons">
+                            <input type="submit" class="button" value="Sign in" />
+                            <a href="https://id.guardian.co.uk/signin/cancel?returnUrl=http%3A%2F%2Fwww.guardian.co.uk&authFailedReturnUrl=http%3A%2F%2Fwww.guardian.co.uk"
+                               class="button button-plain" target="_parent">Cancel</a>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+            <p class="register-link"><span>New? <a href="https://id.guardian.co.uk/register?returnUrl=http%3A%2F%2Fwww.guardian.co.uk" target="_parent">Create your account</a></span></p>
+        </div>
+
+    	                <div class="ft">
+                    <p class="help"><a href="http://www.guardian.co.uk/help/identity-faq" target="_new">Help with your user account</a> </p>
+                </div>
+
+    </div>
+    <script src="/static/493/cs/js/guardian.r2.validator.js"></script>
+    <script src="/static/493/cs/js/guardian.r2.identity.js"></script>
+    <script src="/static/493/cs/js/jquery.cookie.js"></script>
+    <script src="/static/493/cs/js/guardian.r2.identity.cookie-check.js"></script>
+        <script type="text/javascript">
+    var s_account="guardiangu-users,guardiangu-network";
+</script>
+<script type="text/javascript" src="/static/493/cs/js/omniture-H.25.4.js"></script>
+<script type="text/javascript">        
+    s.pageName="Signin";
+    s.server='<!--#echo var="X_GU_httpd"-->';
+    s.channel="Users";
+    s.prop11="Users";
+    s.hier2="GU/Users/Registration";
+    s.events="";
+        s.prop8=""; //pageid
+    s.prop9="userid"; //content type
+    s.eVar23="";
+    s.eVar24="";
+    s.eVar27="";
+    s.eVar28="";
+    s.eVar42="http:\/\/www.guardian.co.uk"
+    s.eVar57=""
+    s.eVar58=""
+        s.state="";
+    s.zip="";
+    var s_code=s.t();if(s_code)document.write(s_code);
+</script>
+<noscript>
+    <div><img alt="" src='https://hits-secure.guardian.co.uk/b/ss/guardiangu-users,guardiangu-network/1/H.20.3/59574?ns=guardian&amp;pageName=Signin&amp;ch=Users&amp;events=&amp;c2=GUID:$requestInformation.omnitureData.userId&amp;c9=userid&amp;c11=Users&amp;v23=basicIdentity%3A%3A%3Atheguardian&amp;v24=&amp;v27=&amp;v28=&amp;h2=GU%2fUsers%2fRegistration' width="1" height="1" /></div>
+</noscript>
+    <script src="/static/493/cs/js/guardian.r2.identity.signin.js"></script>
+    <script>
+        function gPlusSigninCallback(authResult) {
+            var fallbackButton = jQuery(".google-plus-fallback-button");
+            var jsButton = jQuery(".google-plus-js-button")
+
+            fallbackButton.addClass("hidden")
+            jsButton.removeClass("hidden")
+
+            if (authResult['error'] == undefined) {
+                if(authResult['g-oauth-window']) {
+                    jQuery.ajax({
+                        url: 'https://id.guardian.co.uk/jsapi/google/autosignup',
+                        cache: false,
+                        async: true,
+                        crossDomain: true,
+                        dataType: 'jsonp',
+                        data: {
+                            accessToken : authResult.access_token
+                        },
+                        success : function() {
+                            window.open('http:\/\/www.guardian.co.uk', '_parent');
+                        }
+                    });
+                }
+            }
+        }
+    </script>
+        <script type="text/javascript">
+        (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/client:plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+    
+</body>
+</html>

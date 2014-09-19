@@ -1,0 +1,1 @@
+I am text from CustomDecorator.jsp
