@@ -28,6 +28,8 @@
     it should be removed if no additional problems are found.
         <mvc:default-servlet-handler />
     -->
+    <!--
+    // TODO uncomment and see what test error you get, then implement.  You need an authenticationManager class
     <security:global-method-security jsr250-annotations="enabled" pre-post-annotations="enabled" secured-annotations="enabled" />
 
     <security:http use-expressions="true" auto-config="true">
@@ -35,32 +37,20 @@
         <security:form-login login-page="/login" default-target-url="/something"
                     authentication-failure-url="/error_login"  />
         <security:logout logout-success-url="/" delete-cookies="JSESSIONID"/>
-        <!-- <security:remember-me /> -->
         <security:session-management invalid-session-url="/">
-            <!-- <security:concurrency-control max-sessions="4" error-if-maximum-exceeded="true" /> -->
         </security:session-management>
-
     </security:http>
+    -->
 
     <bean id="encoder" class="org.springframework.security.crypto.password.StandardPasswordEncoder" />
-    <bean id="loginController" class="com.codesolid.goalboost.controllers.LoginController" />
+    <bean id="loginController" class="com.codesolid.securecassandra.controllers.LoginController" />
 
-    <bean id="txMgr" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dataSource" />
-    </bean>
-
-    <bean id="jdbcUserDetails" class="com.codesolid.goalboost.security.SiteUserDetailsService">
-        <property name="dataSource" ref="dataSource" />
-        <property name="usersByUsernameQuery" value="select username,password, enabled from users where username=? " />
-        <property name="authoritiesByUsernameQuery" value = "select u.username, ur.authority from users u, userRoles ur where u.id = ur.userId and u.username =?  " />
-    </bean>
-
-    <security:authentication-manager>
+    <!--<security:authentication-manager>
         <security:authentication-provider user-service-ref="jdbcUserDetails">
             <security:password-encoder ref="encoder"/>
         </security:authentication-provider>
     </security:authentication-manager>
-
+-->
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
@@ -70,7 +60,7 @@
         </property>
     </bean>
 
-    <context:component-scan base-package="com.codesolid.goalboost"/>
+    <context:component-scan base-package="com.codesolid.securecassandra"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
@@ -80,14 +70,7 @@
 
 
 
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="${database.driverClassName}" />
-        <property name="url" value="${database.url}" />
-        <property name="username" value="${database.username}" />
-        <property name="password" value="${database.password}" />
-    </bean>
-
-    <bean id="user" class="com.codesolid.goalboost.security.SiteUser">
+    <bean id="user" class="com.codesolid.securecassandra.security.SiteUser">
     </bean>
 
     <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
@@ -108,7 +91,7 @@
         <property name="exceptionMappings">
             <map>
                 <entry key="org.springframework.dao.DataAccessException" value="/errorPages/dataError"/>
-                <entry key="com.codesolid.goalboost.exceptions.NotFoundException" value="/errorPages/pageNotFound"/>
+                <entry key="com.codesolid.securecassandra.exceptions.NotFoundException" value="/errorPages/pageNotFound"/>
             </map>
         </property>
         <!-- <property name="defaultErrorView" value="general-error" /> -->
@@ -116,7 +99,6 @@
 
     <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
 
-    <tx:annotation-driven transaction-manager="txMgr"/>
     <mvc:annotation-driven />
     <mvc:resources mapping="/resources/**" location="/resources/" />
 

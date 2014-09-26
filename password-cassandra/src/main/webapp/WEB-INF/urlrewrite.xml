@@ -9,12 +9,12 @@
     <rule>
             <name>Domain Name Check</name>
             <condition name="host" operator="notequal">^localhost</condition>
-            <condition name="host" operator="notequal">^www.goalboost.com</condition>
+            <condition name="host" operator="notequal">^www.securecassandra.com</condition>
             <condition name="host" operator="notequal">^54.187.237.55:8080/GoalBoost</condition>
             <condition name="host" operator="notequal">^$</condition>
             <from>^/(.*)</from>
             <to type="redirect" last="true">http://54.187.237.55:8080/GoalBoost/$1</to>
-            <to type="redirect" last="true">http://www.goalboost.com/$1</to>
+            <to type="redirect" last="true">http://www.securecassandra.com/$1</to>
         </rule>
     -->
 </urlrewrite>

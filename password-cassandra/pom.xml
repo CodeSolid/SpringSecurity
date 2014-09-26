@@ -148,19 +148,26 @@
             <version>1.9.12</version>
         </dependency>
 
-        <!-- database connection -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-
+    
         <dependency>
           <groupId>com.datastax.cassandra</groupId>
           <artifactId>cassandra-driver-core</artifactId>
           <version>2.1.0</version>
         </dependency>
-		    
+
+        <dependency>
+            <groupId>com.datastax.cassandra</groupId>
+            <artifactId>cassandra-driver-mapping</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+	
+        <!-- database connection LEGACY REMOVE -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+	    
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

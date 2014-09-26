@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/password-jdbc/MySecureApp.iml" filepath="$PROJECT_DIR$/password-jdbc/MySecureApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/password-cassandra/SecureCassandraDemo.iml" filepath="$PROJECT_DIR$/password-cassandra/SecureCassandraDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-rest-service-oauth/spring-rest-service-oauth.iml" filepath="$PROJECT_DIR$/spring-rest-service-oauth/spring-rest-service-oauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot/springboot.iml" filepath="$PROJECT_DIR$/SpringBoot/springboot.iml" />
     </modules>
   </component>
