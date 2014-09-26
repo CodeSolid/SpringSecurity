@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<title>Home</title>
+<link href="../css/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../css/site.css" />
+<!-- Allow older IE versions to style semantic elements -->
+<!--[if lt IE 9]>
+<script>
+    var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+            "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+            "progress,section,time,video").split(',');
+    for (var i = 0; i < e.length; i++) {
+        document.createElement(e[i]);
+    }
+</script>
+<![endif]-->
+</head>
+<body>
+<div id="holder">
+    <nav class="clearfix" class="nav_bordered">
+    <span id="logo">JohnLockwood.com</span>
+    <ul style="text-align:center">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tasks">Tasks</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/goals">Goals</a></li>
+    </ul>
+</nav>
+
+<article class="container">
+    <div>
+
+        <form id="taskform" class="two-thirds column">
+            <h2>Add a Task</h2>
+
+                    <div>
+                        <input type="text" size=52; maxlength="240" id="TaskDescription" class="rounded_input"/>
+                        <button type="button" id="AddTask" class="button">Add</button>
+                    </div>
+                    <div class="column" style="margin-left:-10px;">
+                        Scheduled:<br />
+                        <input type="text" size=12 maxlength=12 id="TaskDate" class="rounded_input_small">
+                    </div>
+                    <div class="column" >Priority<br />
+                        <select id="Priority" class ="rounded_input_small">
+                            <option value="true">Most Important Task (MIT)</option>
+                            <option value="false">Everything Else</option>
+                        </select>
+                    </div>
+                    <div class="column" style="margin-right:0px;">&nbsp;</div>
+
+        </form>
+        <div class="one-third column">
+            <h2>Today's Tasks</h2>
+            <p>No tasks scheduled.</p>
+            <!--<h3>Most Important</h3>
+            <h3>Everything else</h3> -->
+            <!-- <p><a href="#" title="Enter a task at left. These are the most important things you need to do today to help you reach your goals.
+            We recommend adding no more than three tasks to this list.">Learn more</a></p>-->
+
+            <!--
+            <p>Hello, elitepropertiesbroker@gmail.com! <a href="/j_spring_security_logout">Sign Out</a></p>
+            -->
+        </div>
+    </div>
+</article>
+
+<footer>
+    <a href="test2.html">New User State</a>&nbsp;&nbsp;<a href="test.html">After Entering</a></li>
+</footer>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery-ui-1.10.3.custom.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Ready code
+    });
+
+    $("#AddTask").click(function() {
+        alert("Handler for .click() called.");
+    });
+
+    $(function() {
+        $("#TaskDate").datepicker();
+    });
+
+    $(function() {
+        $( document ).tooltip({
+            position: {
+                my: "center bottom-20",
+                at: "center top",
+                using: function( position, feedback ) {
+                    $( this ).css( position );
+                    $( "<div>" )
+                            .addClass( "arrow" )
+                            .addClass( feedback.vertical )
+                            .addClass( feedback.horizontal )
+                            .appendTo( this );
+                }
+            }
+        });
+    });
+
+</script>
+
+</body>
+</html>

@@ -4,14 +4,17 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/password-cassandra" />
     <file type="web" url="file://$PROJECT_DIR$/password-jdbc" />
     <file type="web" url="file://$PROJECT_DIR$/spring-rest-service-oauth" />
   </component>
+  <component name="IdProvider" IDEtalkID="50D69A76A067BA4AEF0BD6F5B1BF1234" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/SpringBoot/pom.xml" />
         <option value="$PROJECT_DIR$/password-jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/password-cassandra/pom.xml" />
       </list>
     </option>
   </component>

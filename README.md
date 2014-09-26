@@ -1,7 +1,7 @@
 SpringSecurity
 ==============
 
-This is the source code for a forthcoming presentation about Spring Security.
+This is the source code for a forthcoming presentation about Spring Security.  Please pardon the very "in-the-interim" state of this repsitory.
 
 The plan for the presentation is to include:
 

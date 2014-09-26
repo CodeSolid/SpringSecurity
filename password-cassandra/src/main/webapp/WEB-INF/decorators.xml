@@ -1,0 +1,16 @@
+<decorators defaultdir="/decorators">
+    <excludes>
+        <pattern>/api/**</pattern>
+        <pattern>**/_**</pattern>
+    </excludes>
+
+    <decorator name="plain" page="Plain.jsp">
+        <pattern>/login*</pattern>
+        <pattern>/register*</pattern>
+    </decorator>
+
+    <decorator name="default" page="MyDecorator.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+    <decorator name="customDecorator" page="CustomDecorator.jsp" />
+</decorators>

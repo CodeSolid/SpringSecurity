@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="../css/site.css" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <!-- Allow older IE versions to style semantic elements -->
+    <!--[if lt IE 9]>
+    <script>
+        var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+                "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+                "progress,section,time,video").split(',');
+        for (var i = 0; i < e.length; i++) {
+            document.createElement(e[i]);
+        }
+    </script>
+    <![endif]-->
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <div class="one-third column">
+            <h1>JohnLockwood.com</h1>
+        </div>
+        <div class="two-thirds column">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/tasks">Tasks</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/goals">Goals</a></li>
+                <li><a href="/j_spring_security_logout">Sign Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<article class="container">
+
+    <div>
+
+
+
+        <div class="two-thirds column">
+            <h2>What Are You Working On?</h2>
+            <form id="taskform">
+                <input type="text" size="60" maxlength="240" id="task1" class="rounded_input" /><br />
+                <button type="button" id="Schedule" class="button">Task Detail</button>
+                <button type="button" id="Sprint" class="button">Quick Sprint</button>
+                <button type="button" id="Start Timer" class="button">Start Timer</button>
+            </form>
+        </div>
+        <div class="one-third column">
+            <h2>Top Three Today</h2>
+            <p>Something something.</p>
+            <p>Something else.</p>
+            <p>Lorem taskum.</p>
+            <p>Hello, elitepropertiesbroker@gmail.com! <a href="/j_spring_security_logout">Sign Out</a></p>
+        </div>
+
+
+
+
+    </div>
+
+
+</article>
+
+<footer>
+    Copyright &copy; 2013.  All rights reserved.
+</footer>
+
+
+<script src="../js/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Ready code
+    });
+</script>
+
+
+</body>
+</html>
