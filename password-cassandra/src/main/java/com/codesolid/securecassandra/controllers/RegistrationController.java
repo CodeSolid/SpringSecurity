@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 
-import javax.validation.Valid;
+//import javax.validation.Valid;
 
 @Controller
 public class RegistrationController {
@@ -35,7 +35,7 @@ public class RegistrationController {
     SignOnEmailVerification signOnEmailVerification;
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String processRegistrationForm(@Valid @ModelAttribute("user") SiteUser user,
+    public String processRegistrationForm(@ModelAttribute("user") SiteUser user,
                               BindingResult result, ModelMap map) {
         /*
         // todo implement

@@ -20,7 +20,7 @@ public class StandardPasswordEncoderDemo {
         assertTrue(encoder.matches(password, encoded));
         assertTrue(encoder.matches(password, encodedFromXML));
 
-        System.out.println(encoded);
+        //System.out.println(encoded);
    }
 
     @Test
@@ -31,8 +31,8 @@ public class StandardPasswordEncoderDemo {
         String encoded2 = encoder.encode(password);
         assertTrue(encoded2 != encoded);
 
-        System.out.println(encoded);
-        System.out.println(encoded2);
+        //System.out.println(encoded);
+        //System.out.println(encoded2);
     }
 
     @Test
@@ -40,7 +40,7 @@ public class StandardPasswordEncoderDemo {
         StandardPasswordEncoder encoder = new StandardPasswordEncoder();
         String password = "6kenpBYxZ5#";
         String encoded = encoder.encode(password);
-        System.out.println("Guest password:\n" + encoded);
+        //System.out.println("Guest password:\n" + encoded);
     }
 
 }

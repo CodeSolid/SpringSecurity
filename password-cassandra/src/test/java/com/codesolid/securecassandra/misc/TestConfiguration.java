@@ -5,14 +5,12 @@ package com.codesolid.securecassandra.misc;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 /**
  *
  */
 public class TestConfiguration {
     static ApplicationContext appContext = null;
-    static DriverManagerDataSource dataSource;
 
     static public ApplicationContext getAppContext() {
         if (appContext == null)

@@ -1,8 +1,8 @@
 package com.codesolid.securecassandra.security;
 
-import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.NotEmpty;
+//import org.hibernate.validator.constraints.Email;
+//import org.hibernate.validator.constraints.Length;
+//import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
@@ -33,16 +33,16 @@ public class SiteUser extends User  {
 
     }
 
-    @NotEmpty(message = "Email address may not be empty")
-    @Email(message = "Not a valid email address")
+  //  @NotEmpty(message = "Email address may not be empty")
+  //  @Email(message = "Not a valid email address")
     private String email;       /* email and username are equivalent */
 
-    @NotEmpty(message = "Password may not be empty")
-    @Length(min=8, max=20, message="Password must contain between eight and twelve characters")
+  //  @NotEmpty(message = "Password may not be empty")
+  //  @Length(min=8, max=20, message="Password must contain between eight and twelve characters")
     private String password;
 
-    @NotEmpty(message = "Password confirmation may not be empty")
-    @Length(min=8, max=20, message="Password confirmation must contain between eight and twelve characters")
+  //  @NotEmpty(message = "Password confirmation may not be empty")
+  //  @Length(min=8, max=20, message="Password confirmation must contain between eight and twelve characters")
     private String passwordConfirmation;
 
     private long id;
