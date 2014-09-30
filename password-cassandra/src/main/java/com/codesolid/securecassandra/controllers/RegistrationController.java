@@ -2,9 +2,8 @@ package com.codesolid.securecassandra.controllers;
 
 import com.codesolid.securecassandra.configuration.ApplicationConfiguration;
 import com.codesolid.securecassandra.mail.SignOnEmailVerification;
-import com.codesolid.securecassandra.model.dao.TokenDAO;
+import com.codesolid.securecassandra.model.repository.TokenDAO;
 import com.codesolid.securecassandra.security.SiteUser;
-import com.codesolid.securecassandra.security.SiteUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Controller;

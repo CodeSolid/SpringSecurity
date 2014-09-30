@@ -1,11 +1,11 @@
-package com.codesolid.securecassandra.model.dao;
+package com.codesolid.securecassandra.model.repository;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.Random;
 
 @Service(value="tokenDAO")
-public class TokenDAO extends DAOBase {
+public class TokenDAO  {
     public enum TokenType { EMAIL_VERIFY, PASSWORD_RESET } ;
 
     public String getRandomToken(int len) {

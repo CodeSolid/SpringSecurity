@@ -1,6 +1,7 @@
-package com.codesolid.securecassandra.model.dao;
+package com.codesolid.securecassandra.model;
 
 import com.codesolid.securecassandra.misc.TestConfiguration;
+import com.codesolid.securecassandra.model.repository.TokenDAO;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -40,9 +41,9 @@ public class TokenDAOTest {
     public void canAddTokenForUser()   {
         /* TODO implement
         String user = "test@johntestusers.org";
-        TokenDAO dao = (TokenDAO) ac.getBean("tokenDAO");
-        String token = dao.addTokenForUser(user, TokenDAO.TokenType.EMAIL_VERIFY);
-        String user2 = dao.getUserForToken(token, TokenDAO.TokenType.EMAIL_VERIFY);
+        TokenDAO repository = (TokenDAO) ac.getBean("tokenDAO");
+        String token = repository.addTokenForUser(user, TokenDAO.TokenType.EMAIL_VERIFY);
+        String user2 = repository.getUserForToken(token, TokenDAO.TokenType.EMAIL_VERIFY);
         assertEquals(user, user2);
         */
     }

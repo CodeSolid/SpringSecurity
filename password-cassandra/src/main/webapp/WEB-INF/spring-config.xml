@@ -6,6 +6,7 @@
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:cql="http://www.springframework.org/schema/data/cassandra"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:repository="http://www.springframework.org/schema/data/jpa"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/security
@@ -16,7 +17,9 @@
        http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
        http://www.springframework.org/schema/data/cassandra
-       http://www.springframework.org/schema/data/cassandra/spring-cassandra-1.0.xsd"
+       http://www.springframework.org/schema/data/cassandra/spring-cassandra-1.0.xsd
+       http://www.springframework.org/schema/data/jpa
+       http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd"
        >
 
     <bean id="propertyPlaceHolderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -27,6 +30,7 @@
             </list>
         </property>
     </bean>
+
 
     <!-- This servlet handler wreaks havoc with MockMVC.  Not sure why it was originally here but
     it should be removed if no additional problems are found.
@@ -49,6 +53,7 @@
     <bean id="encoder" class="org.springframework.security.crypto.password.StandardPasswordEncoder" />
     <bean id="loginController" class="com.codesolid.securecassandra.controllers.LoginController" />
 
+
     <!--<security:authentication-manager>
         <security:authentication-provider user-service-ref="jdbcUserDetails">
             <security:password-encoder ref="encoder"/>
@@ -56,12 +61,18 @@
     </security:authentication-manager>
 -->
 
-
+    <cql:repositories base-package="com.codesolid.securecassandra.com.codesolid.securecassandra.model.repository" />
     <cql:cluster />
-    <cql:session keyspace-name="test" />
-    <cql:template />
+    <cql:session keyspace-name="securityDemo" />
+    <cql:template id="cassandraOperations"/>
     <cql:converter />
     <cql:mapping />
+
+    <bean id="userRepository" class="com.codesolid.securecassandra.model.repository.UserRepository">
+        <constructor-arg name="template" ref="cassandraOperations"  />
+
+    </bean>
+
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
@@ -109,7 +120,6 @@
         <!-- <property name="defaultErrorView" value="general-error" /> -->
     </bean>
 
-    <!-- <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" /> -->
 
     <mvc:annotation-driven />
     <mvc:resources mapping="/resources/**" location="/resources/" />

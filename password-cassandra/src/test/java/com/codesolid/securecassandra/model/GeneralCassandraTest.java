@@ -1,4 +1,4 @@
-package com.codesolid.securecassandra.model.dao;
+package com.codesolid.securecassandra.model;
 
 import junit.framework.Assert;
 import org.testng.annotations.Test;
